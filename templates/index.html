@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title> House price prediction</title>
+    <link rel="stylesheet" type="text/css" href="\static\css\style.css">   
+</head>
+    <body>
+    <div class="login-box">
+    <img src="\static\images\homelogo.png" class="avatar">
+        <h1>Code with tushar present house price prediction</h1>
+            <form action="{{url_for('predict')}}" method = "post">
+            <p>Enter age of the house.</p>
+            <input type="number" name="old" placeholder="how old is the house?">
+            <p>Enter the quantity of rooms.</p>
+            <input type="number" name="room" placeholder="Total room of house.">
+            <p>Enter the quantity of bedroom.</p>
+            <input type="number" name="bedroom" placeholder="Total bedroom of house.">
+            <p>Enter the Population of the city near by house.</p>
+            <input type="number" name="population" placeholder="Total population of your city">
+            <p>Enter the quantiy of family member or household in the house.</p>
+            <input type="number" name="household" placeholder="Total quantity of members or household.">
+            <p>Enter the Median of income.</p>
+            <input type="number" name="income" placeholder="Median of income.">
+            <input type="submit" value="Predict the house price"> 
+            </form>
+         <h1>{{ Prediction_text }}</h1>
+        </div>
+    
+    </body>
+</html>
